@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUE1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>HII {{name}}!</h1>
+
+    <form action="/quiz1/submit" method="post">
+        <p><strong>Question 1:</strong>  35 x 9</p>
+        <input type="radio" name="answer" value="A" required> A) 300 <br>
+        <input type="radio" name="answer" value="B"> B) 315 <br>
+        <input type="radio" name="answer" value="C"> C) 360 <br>
+        <input type="radio" name="answer" value="D"> D) 290 <br><br>
+        {% if not submitted %}
+        <button type="submit" >Submit</button>
+        {% endif %}
+    </form>
+   <div class="c">
+    {% if result %}
+        <h2>{{ result }}</h2>
+        <p>Correct option: {{ correct_answer }}</p>
+    </div>    
+    <form action="/quiz2" method="post">
+        <button type="submit">NEXT</button>
+    </form>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>HELLO, WELCOME TO QUIZ</h1>
+    <form action="/quiz1" method="post" id="u">
+        <input type="text" name="name" placeholder="Enter username:"><br>
+        <input type="email" name="mail" placeholder="Enter email: "><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div class="c"> </div>
+</body>
+</html>
